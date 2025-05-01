@@ -1,0 +1,31 @@
+ShopMe E-Commerce is a modern, serverless e-commerce platform built using React for the frontend and AWS services for the backend. The application leverages AWS Amplify for hosting and CI/CD, Amazon Cognito for user authentication, API Gateway for routing API requests, AWS Lambda for serverless compute, and IAM for access control.
+
+🧱 Architecture Components
+1. Frontend – React with AWS Amplify
+Hosting: Utilizes AWS Amplify to host the React application, providing a seamless deployment pipeline and hosting environment.
+
+Authentication: Integrates Amplify's Auth module to manage user sign-up, sign-in, and session management, interfacing with Amazon Cognito under the hood.
+
+API Integration: Employs Amplify's API module to interact with backend services via REST APIs.
+
+2. Authentication – Amazon Cognito
+User Pools: Manages user registration and authentication, supporting features like multi-factor authentication (MFA) and password recovery.
+
+Identity Pools: Grants users temporary AWS credentials to access other AWS services securely.
+
+Federated Identities: Supports social logins (e.g., Google, Facebook) for broader user accessibility.
+
+3. API Management – Amazon API Gateway
+REST APIs: Serves as the entry point for all client requests, routing them to appropriate Lambda functions.
+
+Authorization: Integrates with Cognito to authorize requests, ensuring that only authenticated users can access protected endpoints.
+
+4. Compute – AWS Lambda
+Serverless Functions: Handles business logic for various operations such as product retrieval, cart management, and order processing.
+
+Scalability: Automatically scales based on the number of incoming requests, ensuring high availability.
+
+5. Access Control – AWS IAM
+Roles and Policies: Defines granular permissions for different services and users, ensuring secure access to resources.
+
+Lambda Execution Role: Grants Lambda functions the necessary permissions to interact with other AWS services like DynamoDB or S3.
